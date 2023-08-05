@@ -29,23 +29,17 @@ WHERE Product_count > 2;
 SELECT * FROM phone_base
 WHERE Manufacturer = "Samsung";
 
--- Выведите информацию о телефонах, где суммарный чек больше 100 000 и меньше 145 000**
-
-SELECT Product_name, Manufacturer, Product_count, Price, Price * Product_count AS Total_price
-FROM phone_base
-WHERE Price * Product_count > 100000 AND Price * Product_count < 145000;
-
 -- С помощью регулярных выражений найти nовары, в которых есть упоминание "Iphone"
 
 SELECT * FROM phone_base
 WHERE Product_name 
 LIKE "iPhone%";
 
--- С помощью регулярных выражений найти "Galaxy"
+-- С помощью регулярных выражений найти "Samsung"
 
 SELECT * FROM phone_base
 WHERE Product_name 
-LIKE "%Galaxy%"; 
+LIKE "%Samsung%"; 
 
 
 -- С помощью регулярных выражений найти товары, в которых есть ЦИФРЫ
